@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Fund extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function dinsos(){
+        return $this->belongsTo(Dinsos::class);
+    }
+}
